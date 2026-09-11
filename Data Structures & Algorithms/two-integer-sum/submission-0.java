@@ -1,0 +1,16 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        // The simplest solution is brute force.
+        // This is O(n2)
+
+        for(int i = 0; i < nums.length; i++) {
+            for(int j = 0; j < nums.length; j++) {
+                if(j != i && nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+
+        return new int[]{0, 0};
+    }
+}
